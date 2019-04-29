@@ -1,0 +1,77 @@
+html,
+body {
+	height: 100%;
+	margin: 0
+}
+body {
+	display: flex;
+	flex-flow: column;
+	background-color: #486CD9;
+}
+.header {
+	flex: 0 1 auto;
+  /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  */
+}
+.color-text{
+	color: #486CD9;
+	
+}
+.navbar{
+	border-radius: 0;
+    margin: 0;
+}
+#main-content {
+	flex: 1 1 auto;
+	padding: 30px 0;
+}
+.content-centered {
+	display: flex;
+    align-items: center;
+}
+.footer {
+	flex: 0 1 40px;
+	padding: 15px 0;
+	background-color: #f8f8f8;
+	border: 1px solid #e7e7e7;
+}
+.footer p {
+    margin: 0;
+}
+
+.img__navbar{
+	margin: auto;
+    margin-right: auto !important;
+    width: 8em;
+}
+
+.color{
+	color: #486CD9;
+}
+
+.bg__color{
+	background-color: #F2F2F2;
+}
+
+.card__center{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img__logo{
+    width: 40%;
+    display: block;
+    margin: 0.5em auto 0.5em;
+}
+
+.align-text{
+	text-align: left !important;
+}
+
+
+

@@ -1,0 +1,17 @@
+@media print{
+	#btn-print{
+		display: none;
+	}
+	.footer {
+	    border: 0;
+	}
+	.footer .col-md-6{
+	    display: block;
+	    width: 100%;
+	    float: none;
+	}
+	.footer .text-left,
+	.footer .text-right{
+	    text-align: center;
+	}
+}

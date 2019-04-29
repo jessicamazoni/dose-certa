@@ -1,0 +1,16 @@
+.card__center{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img__logo{
+    width: 40%;
+    display: block;
+    margin: 0.5em auto 0.5em;
+}
+
+.align-text{
+	text-align: left !important;
+}

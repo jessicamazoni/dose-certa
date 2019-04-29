@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Relatório</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/relatorio.css" />
+</head>
+<body>
+   <nav class="navbar bg__color">
+    <a class="navbar-brand" style="padding-left: 60px" href="#">
+      <img src="img/logo.svg" width="80" height="60" class="d-inline-block" alt="">
+     <strong class="color-text">DOSE CERTA</strong>
+    
+    </a>
+  </nav> 
+  <header class="header">
+    <nav class="navbar navbar-default">
+      <div class="container">
+       
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/calculadora?id_usuario=<%=id_usuario%>">Calculadora</a></li>
+						<li><a href="/relatorio?id_usuario=<%=id_usuario%>">Relatório</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Olá, <%=nome%> <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/">Sair</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+  <section id="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-right">
+          <a id="btn-print" class="btn btn-success" href="javascript:;" onclick="window.print()"><i class="fa fa-print"></i> Imprimir relatório</a>
+        </div>
+        <br><br><br>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered table-light">
+          	<thead>
+          		<tr style="text-align: center;">
+          			<th>Usuário</th>
+          			<th>Vazão (L/s)</th>
+          			<th>Dosagem (mg/L)</th>
+          			<th>Porcentagem (%)</th>
+          			<th>Constante</th>
+          			<th>Dosagem Certa (ml/s)</th>
+          		</tr>
+          	</thead>
+          	<tbody>
+          			<tr style="text-align: center;">
+									<td>Victor Hugo</td>
+									<td>3 L/s</td>
+									<td>8 mg/L</td>
+									<td>2,5 %</td>
+									<td>7</td>
+									<td>4,5 ml/s</td>
+	          		</tr>
+							
+          	</tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-center color">Desenvolvido por <strong>Dose Certa</strong></p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

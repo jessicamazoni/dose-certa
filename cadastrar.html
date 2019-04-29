@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastrar</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+	<div class="card__center">
+		<div class="container pt-3">
+			 <div class="row justify-content-sm-center">
+		    <div class="col-sm-6 col-md-4">
+		    <div class="card text-center">
+		     	<div class="card-header">
+		         	<strong>DOSE CERTA</strong> 
+		        </div>
+				<!-- <% if(typeof msg !== 'undefined') { %>
+					<div class="alert alert-<%=msg.type%> alert-dismissible" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					  <%=msg.text%>
+					</div>
+				<% } %> -->
+				<div class="card-body">
+				<form method="POST" action="/cadastrar">
+					<div class="form-group align-text">
+						<label for="usuario">Usuário</label>
+						<input class="form-control" type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" required />
+					</div>
+					<div class="form-group align-text">
+						<label for="nome">Nome</label>
+						<input class="form-control" type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+					</div>
+					<div class="form-group align-text">
+						<label for="email">E-mail</label>
+						<input class="form-control" type="email" name="email" id="email" placeholder="Digite seu email" required />
+					</div>
+					<div class="form-group align-text">
+						<label for="senha">Senha</label>
+						<input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha" required />
+					</div>
+					<div class="form-group">
+						<button class="btn btn-success btn-block mb-4" type="submit">CADASTRAR</button>
+					</div>
+						<div class="col-sm-5 mb-3"><a href="home.html">Fazer login</a></div>
+				</form>
+			</div>
+			
+			</div>
+		</div>
+	</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-12">
+					<p class="text-center color">Desenvolvido por <strong>Dose Certa</strong></p>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<script src="jquery/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  </head>
+<body>
+  <nav class="navbar bg__color">
+    <a class="navbar-brand" style="padding-left: 60px" href="#">
+      <img src="img/logo.svg" width="80" height="60" class="d-inline-block" alt="">
+     <strong class="color-text">DOSE CERTA</strong>
+     <i class="fas fa-sign-out-alt"></i>
+    </a>
+  </nav> 
+    
+  <!-- <header class="header">
+    <nav class="navbar navbar-default">
+      <div class="container"> -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+       <!--  <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/calculadora?id_usuario=<%=id_usuario%>">Dose Certa</a>
+        </div>
+ -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/calculadora?id_usuario=<%=id_usuario%>">Calculadora</a></li>
+            <li><a href="/relatorio?id_usuario=<%=id_usuario%>">Relatório</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Olá, <%=nome%> <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/">Sair</a></li>
+              </ul>
+            </li>
+          </ul> -->
+ <!--        </div>
+      </div>
+    </nav>
+  </header> -->
+  <section class="card__center">
+    <div class="container pt-3">
+      <div class="row justify-content-sm-center">
+        <div class="col-sm-6 col-md-6">
+          <div class="card text-center">
+            <div class="card-header">
+             <strong>CALCULADORA</strong> 
+            </div>
+             <div class="card-body">
+            <form method="POST" action="/calculadora?id_usuario=<%=id_usuario%>">
+              <div class="form-group align-text">
+                <label for="qa">Vazão (L/s)</label>
+                <input class="form-control" type="text" id="qa" name="qa" placeholder="Informe a vazão da água (Qa) em L/segundo" required />
+              </div>
+              <div class="form-group align-text">
+                <label for="ph">Dosagem (mg/L)</label>
+                <input class="form-control" type="text" name="d" id="d" placeholder="Informe a dosagem do produto químico em mg/L" required />
+              </div>
+              <div class="form-group align-text">
+                <label for="porcentagem">Porcentagem (%)</label>
+                <input class="form-control" type="text" name="porcentagem" id="porcentagem" placeholder="Informe a porcentagem da solução do produto químico" required />
+              </div>
+              <div class="form-group text-center">
+                <button class="btn btn-success mb-1"  type="submit">CALCULAR</button>
+              </div>
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-center color">Desenvolvido por <strong>Dose Certa</strong></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="jquery/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
