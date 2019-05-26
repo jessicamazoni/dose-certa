@@ -8,6 +8,9 @@ body {
 	flex-flow: column;
 	background-color: #486CD9;
 }
+a{
+	transition: all 0.3s ease-in-out;
+}
 .header {
 	flex: 0 1 auto;
   /* The above is shorthand for:
@@ -23,6 +26,26 @@ body {
 .navbar{
 	border-radius: 0;
     margin: 0;
+}
+li.nav-item:after {
+    content: '';
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3px;
+    background-color: transparent;
+	transition: all 0.3s ease-in-out;
+}
+li.nav-item.active:after,
+li.nav-item:hover:after {
+    background-color: #486cd9;
+}
+a.nav-link {
+    color: #555;
+}
+a.nav-link:hover {
+    color: #486cd9;
 }
 #main-content {
 	flex: 1 1 auto;
@@ -58,6 +81,7 @@ body {
 
 .card__center{
 	height: 100vh;
+    margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -72,6 +96,3 @@ body {
 .align-text{
 	text-align: left !important;
 }
-
-
-

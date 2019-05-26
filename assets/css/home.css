@@ -1,5 +1,6 @@
 .card__center{
 	height: 100vh;
+    margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
