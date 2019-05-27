@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-	<title>Cadastrar</title>
+	<title>Finalizar Cadastro</title>
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css" />
 	<link rel="stylesheet" href="assets/css/styles.css" />
@@ -24,16 +24,45 @@
 		    <div class="col-sm-6 col-md-4">
 		    <div class="card text-center">
 		     	<div class="card-header">
-	         	<strong class="text-uppercase">Cadastre-se</strong>
+	         	<strong class="text-uppercase">Finalizar Cadastro</strong>
 	        </div>
 					<div class="card-body">
 						<form class="was-validated" method="POST" action="/cadastrar">
-							<div class="form-group align-text">
+							<div class="form-group text-left">
+								<label for="usuario">Matrícula</label>
+								<input class="form-control" type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" required />
+									<div class="invalid-feedback">
+						        Este campo é obrigatório!
+						      </div>
+							</div>
+							<div class="form-group text-left">
+								<label for="nome">Nome</label>
+								<input class="form-control" type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+							</div>
+							<div class="form-group text-left">
 								<label for="email">E-mail</label>
 								<input class="form-control" type="email" name="email" id="email" placeholder="Digite seu email" required />
 							</div>
+							<div class="form-group text-left">
+								<label for="senha">Senha</label>
+								<input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha" required />
+								<div class="invalid-feedback">
+					        A senha deve conter entre 8 e 12 caracteres, pelo menos uma letra maíuscula, uma letra minúscula e um número
+					      </div>
+							</div>
+							<div class="form-group text-left">
+								<label for="perfil">Perfil</label>
+								<select class="form-control" name="perfil" id="perfil" required>
+									<option value="" selected disabled hidden>Digite seu perfil</option>
+									<option value="1">Gestor</option>
+									<option value="2">Operador</option>
+								</select>
+								<div class="invalid-feedback">
+					        Seleciona seu perfil!
+					      </div>
+							</div>
 							<div class="form-group">
-								<button class="btn btn-success btn-block mb-4 text-uppercase" type="submit">Cadastrar</button>
+								<button class="btn btn-success btn-block mb-4 text-uppercase" type="submit">Finalizar Cadastro</button>
 								<a href="home.html" class="btn btn-primary btn-block mb-4 text-uppercase">Já tenho login</a>
 							</div>
 						</form>

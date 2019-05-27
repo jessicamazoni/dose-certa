@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title>Login</title>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css" />
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="stylesheet" href="assets/css/home.css" />
+</head>
+<body>
+ 	<nav class="navbar navbar-expand-lg bg__color">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/logo.svg" width="80" height="60" class="d-inline-block" alt="">
+       	<strong class="color-text">DOSE CERTA</strong>
+      </a>
+    </div>
+	</nav>
+	<div class="card__center">
+		<div class="container pt-3">
+			<div class="alert alert-danger alert-dismissible" role="alert">
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  Falha no login. Senha ou matrícula incorretos!
+			</div>
+		  <div class="row justify-content-sm-center">
+		    <div class="col-sm-6 col-md-4">
+		      <div class="card text-center">
+		        <div class="card-header">
+		         <strong class="text-uppercase">Login</strong> 
+		        </div>
+		        <div class="card-body">
+							<img class="img__logo" src="assets/img/logo.svg" />
+							<form class="form-signin">
+								<div class="form-group align-text">
+									<label for="usuario">Matrícula</label>
+									<input class="form-control" type="text" id="usuario" name="usuario" placeholder="Digite sua matrícula" required />
+								</div>
+								<div class="form-group align-text">
+									<label for="senha">Senha</label>
+									<input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha" required />
+									<div class="invalid-feedback">
+						        Por favor, informe sua senha.
+						      </div>
+								</div>
+								<div class="form-group">
+									<button class="btn btn-success btn-block mb-4 text-uppercase" type="submit">Entrar</button>
+								</div>
+								<div class="form-group text-left">
+									<a href="#">Esqueci minha senha</a>
+								</div>
+								<div class="form-group">
+									<a href="cadastrar.html" class="btn btn-danger btn-block mb-4 text-uppercase">Cadastre-se</a>
+								</div>
+							</form>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="row" >
+				<div class="col-md-12">
+					<p class="text-center color">Desenvolvido por <strong>Dose Certa</strong></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="assets/jquery/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,74 +1,178 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>Relatório</title>
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/relatorio.css" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/relatorio.css" />
 </head>
 <body>
-   <nav class="navbar bg__color">
-    <a class="navbar-brand" style="padding-left: 60px" href="#">
-      <img src="img/logo.svg" width="80" height="60" class="d-inline-block" alt="">
-     <strong class="color-text">DOSE CERTA</strong>
-    
-    </a>
-  </nav> 
-  <header class="header">
-    <nav class="navbar navbar-default">
-      <div class="container">
-       
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="main-menu">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/calculadora?id_usuario=<%=id_usuario%>">Calculadora</a></li>
-						<li><a href="/relatorio?id_usuario=<%=id_usuario%>">Relatório</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Olá, <%=nome%> <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="/">Sair</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-  </header>
+   <nav class="navbar navbar-expand-lg bg__color">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/logo.svg" width="80" height="60" class="d-inline-block" alt="">
+       <strong class="color-text">DOSE CERTA</strong>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Calculadora</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Relatório <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Olá, Marcos Silva
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Alterar dados</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Sair</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <section id="main-content">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-right">
-          <a id="btn-print" class="btn btn-success" href="javascript:;" onclick="window.print()"><i class="fa fa-print"></i> Imprimir relatório</a>
+          <a id="btn-print" class="btn btn-warning" href="javascript:;" onclick="window.print()"><i class="fa fa-print"></i> Imprimir relatório</a>
         </div>
         <br><br><br>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <table class="table table-bordered table-light">
-          	<thead>
-          		<tr style="text-align: center;">
-          			<th>Usuário</th>
-          			<th>Vazão (L/s)</th>
-          			<th>Dosagem (mg/L)</th>
-          			<th>Porcentagem (%)</th>
-          			<th>Constante</th>
-          			<th>Dosagem Certa (ml/s)</th>
-          		</tr>
-          	</thead>
-          	<tbody>
-          			<tr style="text-align: center;">
-									<td>Victor Hugo</td>
-									<td>3 L/s</td>
-									<td>8 mg/L</td>
-									<td>2,5 %</td>
-									<td>7</td>
-									<td>4,5 ml/s</td>
-	          		</tr>
-							
-          	</tbody>
-          </table>
+          <div class="table-responsive">
+            <table class="table table-bordered table-light">
+            	<thead>
+            		<tr style="text-align: center;">
+            			<th>Data da Dosagem</th>
+                  <th>Usuário</th>
+            			<th>Vazão (L/s)</th>
+            			<th>Dosagem (mg/L)</th>
+            			<th>Porcentagem (%)</th>
+            			<th>Constante</th>
+            			<th>Dosagem Certa (ml/s)</th>
+            		</tr>
+            	</thead>
+              <tbody>
+                  <tr style="text-align: center;">
+                    <td>23/05/2019 às 15:33</td>
+                    <td>Marcos Silva</td>
+                    <td>100 L/s</td>
+                    <td>5 mg/L</td>
+                    <td>20 %</td>
+                    <td>10</td>
+                    <td>2.5 ml/s</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>23/05/2019 às 12:17</td>
+                    <td>Marcos Silva</td>
+                    <td>50 L/s</td>
+                    <td>3 mg/L</td>
+                    <td>15 %</td>
+                    <td>10</td>
+                    <td>1</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>23/05/2019 às 09:14</td>
+                    <td>Marcos Silva</td>
+                    <td>80 L/s</td>
+                    <td>5 mg/L</td>
+                    <td>20 %</td>
+                    <td>10</td>
+                    <td>2 ml/s</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>22/05/2019 às 17:15</td>
+                    <td>Maria Eduarda</td>
+                    <td>200 L/s</td>
+                    <td>7 mg/L</td>
+                    <td>15 %</td>
+                    <td>10</td>
+                    <td>9.33333 ml/s</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>22/05/2019 às 14:08</td>
+                    <td>Maria Eduarda</td>
+                    <td>180 L/s</td>
+                    <td>1 mg/L</td>
+                    <td>12 %</td>
+                    <td>10</td>
+                    <td>1.8 ml/s</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>22/05/2019 às 09:21</td>
+                    <td>Maria Eduarda</td>
+                    <td>100 L/s</td>
+                    <td>5 mg/L</td>
+                    <td>10 %</td>
+                    <td>10</td>
+                    <td>5 ml/s</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>21/05/2019 às 17:12</td>
+                    <td>Maria Eduarda</td>
+                    <td>100 L/s</td>
+                    <td>5 mg/L</td>
+                    <td>10 %</td>
+                    <td>10</td>
+                    <td>5 ml/s</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>21/05/2019 às 15:20</td>
+                    <td>Maria Eduarda</td>
+                    <td>100 L/s</td>
+                    <td>5 mg/L</td>
+                    <td>10 %</td>
+                    <td>10</td>
+                    <td>5 ml/s</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>21/05/2019 às 09:41</td>
+                    <td>Maria Eduarda</td>
+                    <td>100 L/s</td>
+                    <td>5 mg/L</td>
+                    <td>10 %</td>
+                    <td>10</td>
+                    <td>5</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>21/05/2019 às 17:51</td>
+                    <td>Maria Eduarda</td>
+                    <td>100 L/s</td>
+                    <td>5 mg/L</td>
+                    <td>10 %</td>
+                    <td>10</td>
+                    <td>5 ml/s</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>21/05/2019 às 15:18</td>
+                    <td>Marcos Silva</td>
+                    <td>200 L/s</td>
+                    <td>45 mg/L</td>
+                    <td>9 %</td>
+                    <td>10</td>
+                    <td>100 ml/s</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td>21/05/2019 às 09:13</td>
+                    <td>Marcos Silva</td>
+                    <td>1000 L/s</td>
+                    <td>50 mg/L</td>
+                    <td>10 %</td>
+                    <td>10</td>
+                    <td>500 ml/s</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

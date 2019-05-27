@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>Resultado Calculadora</title>
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/calculadora.css" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-   <nav class="navbar bg__color">
-    <a class="navbar-brand" style="padding-left: 60px" href="#">
-      <img src="img/logo.svg" width="80" height="60" class="d-inline-block" alt="">
-     <strong class="color-text">DOSE CERTA</strong>
-     
-    </a>
-    <i class="fas fa-sign-out-alt" style="color: red"></i>
-  </nav> 
- 
+   <nav class="navbar navbar-expand-lg bg__color">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/logo.svg" width="80" height="60" class="d-inline-block" alt="">
+       <strong class="color-text">DOSE CERTA</strong>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Calculadora <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Relatório</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Olá, Victor Lobo
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Alterar dados</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Sair</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <section class="card__center">
-    <div class="container pt-3">4
+    <div class="container pt-3">
       <div class="row justify-content-sm-center">
         <div class="col-md-6">
           <div class="card text-center">
@@ -26,7 +46,7 @@
              <strong>RESULTADO CALCULADORA</strong> 
             </div>
             <div class="card-body">
-              <p>A dose certa de sulfato de alumínio (Qs) a ser aplicada é de <span class="label label-success"> 4.5 ml/s </span></p>
+              <p>A dose certa de sulfato de alumínio (Qs) a ser aplicada é de <span class="bg-success text-light" style="padding: 0 7px;"><strong>4.5 ml/s</strong></span></p>
               <p>Os dados para calcular foram os seguintes:</p>
               <ul class="list-unstyled">
                 <li class="list-group-item">Vazão: <strong>3 L/s</strong></li>
